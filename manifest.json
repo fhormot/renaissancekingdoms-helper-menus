@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Renaissance Kingdoms quicklinks",
+    "version": "1.0",
+    "description": "A sidebar with quicklinks to avoid unnecessary clickin.",
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ]
+}
+
