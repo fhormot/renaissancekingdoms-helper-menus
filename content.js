@@ -39,15 +39,24 @@ function onDOMLoaded() {
             div2.className = 'ui_element_bloqueCadenas';
             link.appendChild(div2);
 
+            var iconSpan = document.createElement('span');
+            iconSpan.className = 'iconeMenu iconeMenu1';
+
+            var iconSpanInner = document.createElement('span');
+            iconSpanInner.className = 'iconeMenuInterne';
+            iconSpan.appendChild(iconSpanInner);
+
+            link.appendChild(iconSpan);
+
             var span = document.createElement('span');
             span.innerHTML = urlExtensions[key].name;
             span.className = 'btnsMenu_Texte';
             link.appendChild(span);
 
-            unwantedDiv.appendChild(link);
+            insertDiv.insertBefore(link, unwantedDiv);
         }
-        // helperDiv.appendChild(list);
-        // unwantedDiv.appendChild(list);
+
+        insertDiv.removeChild(unwantedDiv);
     }
 }
 
